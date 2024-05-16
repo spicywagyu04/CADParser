@@ -17,7 +17,9 @@ This project was started by Frank Wang and Kevin Shao with an attempt to reimple
 ## Conclusion
 
 ## References
-Zhou, S., Tang, T., & Zhou, B. (2023). CADParser: A Learning Approach of Sequence Modeling for B-Rep CAD. Proceedings of the Thirty-Second International Joint Conference on Artificial Intelligence (IJCAI-23). \ \
+Zhou, S., Tang, T., & Zhou, B. (2023). CADParser: A Learning Approach of Sequence Modeling for B-Rep CAD. Proceedings of the Thirty-Second International Joint Conference on Artificial Intelligence (IJCAI-23).
+
+
 Pradeep Kumar Jayaraman, Aditya Sanghi, Joseph G Lambourne, Karl DD Willis, Thomas Davies, Hooman Shayani, and Nigel Morris. Uv-net: Learning from boundary representations. Proceedings
 of the IEEE/CVF Conference on Computer Vision and Pattern Recognition.
 
