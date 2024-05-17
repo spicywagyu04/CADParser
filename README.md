@@ -28,8 +28,19 @@ Recall: the proportion of generated command sequences that can be successfully r
 
 ## Re-implementation Details
 ### Modifications to Original Paper
+Since CADParser does not have public code, we needed to make the following modifications due to our limited domain knowledge and the paper's ambiguity in certain sections:
+
+* We used Fusion360 dataset instead of the CADParser dataset to train our model. This was because the CADParser dataset contains complex commands in JSON format that are difficult to preprocess into vectors. Preprocessing requires specific domain knowledge in CAD, and we did not have sufficient time to implement it. We were able to find a preprocessing script for commands line, arc, circle, and extrusion, which are the only commands that the Fusion360 dataset contains.
+  * The Fusion360 dataset contains around 8200 samples, compared to CADParser's 40,000+.
+* We implemented our own version of Fusion Module. The general architecture is similar to the paper's specification. The paper was not clear about how the Fusion Module handles variable command sequence length. Hence, we used a dynamic linear layer. Also, the paper did not specify Fusion Module's output dimension, which in our implementation is set to 64.
+
 ### Instructions for Running Our Code
+We recommend to run our code in CADParser.ipynb on Google Colab. The only dependency that requires installation is the DGL package for CUDA. DGL is a library for handling graph representations which we use for representing our CAD models' geometric features. The remaining dependencies are all within the default Colab environment and do not require installation.
+
+The code should be able to run successfully by running every cell from the top.
+
 ### Computational Resources
+We use a Google Colab L4 GPU to run our notebook. A T4 GPU would also work.
 
 ## Our Results
 
