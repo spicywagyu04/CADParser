@@ -7,6 +7,9 @@ The paper proposes an encoder-decoder model for the task of interest. The encode
 Note that each construction commands have all been parametrized into a vector of 19 discrete values, where the first value indicates the type of command (eg. extrusion, line) and the remaining 18 values are some command-specific parameters. Since there are 12 commands within the paper's implementation, the command type value ranges from 0 to 11. The parameter values range from -1 to 255, where -1 means the parameter is unused (as construction types tend to use different parameters) and 0 to 255 correspond to some continuous value associated with the command that has been discretized.
 
 In other words, the autoregressive model tries to make two categorical predictions at every iteration where it predicts the following construction command. The first is the command type (12 categories), and the second is the parameter type (257 categories).
+
+<img width="1150" alt="CADParser model architecture" src="https://github.com/spicywagyu04/CADParser/assets/96509953/9e436d1f-a12f-4ac9-b687-4ec9c9e386e3">
+
 ### Main Contributions
 
 ## Chosen Result to Replicate
