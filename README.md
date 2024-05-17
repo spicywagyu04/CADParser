@@ -4,6 +4,10 @@ This project was started by Frank Wang and Kevin Shao with an attempt to reimple
 ### Methodology
 The paper proposes an encoder-decoder model for the task of interest. The encoder is adapted from the [Uv-net paper]([url](https://arxiv.org/abs/2006.10211)) by Jayaraman _et.al._ [2] and serves to extract geometric information from the CAD model contained within BRep file. The decoder is an autoregressive Transformer [3] decoder that takes in a token representing start of a construction sequence along with a latent vector representing CAD geometry; the latent vector is the output of the encoder. Then, the decoder predicts the next construction command and continues until a complete construction sequence is generated.
 
+
+<img width="559" alt="CADParser commands with type and parameters" src="https://github.com/spicywagyu04/CADParser/assets/96509953/ba2fdc4a-d3c1-4eb6-89e1-b42c44a8306a">
+
+
 Note that each construction commands have all been parametrized into a vector of 19 discrete values, where the first value indicates the type of command (eg. extrusion, line) and the remaining 18 values are some command-specific parameters. Since there are 12 commands within the paper's implementation, the command type value ranges from 0 to 11. The parameter values range from -1 to 255, where -1 means the parameter is unused (as construction types tend to use different parameters) and 0 to 255 correspond to some continuous value associated with the command that has been discretized.
 
 In other words, the autoregressive model tries to make two categorical predictions at every iteration where it predicts the following construction command. The first is the command type (12 categories), and the second is the parameter type (257 categories).
