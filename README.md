@@ -18,6 +18,13 @@ In other words, the autoregressive model tries to make two categorical predictio
 Compared to the DeepCAD paper [4], the CADParser paper expanded the set of processable CAD construction commands from 4 to 10. In addition, it provides a public dataset of size 40k+ containing CAD models with their construction command sequences. This dataset has samples with more complex commands that the CADParser model is able to process.
 
 ## Chosen Result to Replicate
+<img width="579" alt="CADParser results" src="https://github.com/spicywagyu04/CADParser/assets/96509953/200536ec-c454-4436-8b15-a06035e6e955">
+
+In our reimplementation project, we wish to replicate the CADParser's IOU and Recall metric scores, which are 0.81 and 0.64 respectively. 
+
+IOU: a measure of geometric similarity between CAD models reconstructed from generated CAD construction command sequences and the ground truth CAD model.
+
+Recall: the proportion of generated command sequences that can be successfully reconstructed into CAD models.
 
 ## Re-implementation Details
 ### Modifications to Original Paper
