@@ -15,6 +15,7 @@ In other words, the autoregressive model tries to make two categorical predictio
 <img width="1150" alt="CADParser model architecture" src="https://github.com/spicywagyu04/CADParser/assets/96509953/9e436d1f-a12f-4ac9-b687-4ec9c9e386e3">
 
 ### Main Contributions
+Compared to the DeepCAD paper [4], the CADParser paper expanded the set of processable CAD construction commands from 4 to 10. In addition, it provides a public dataset of size 40k+ containing CAD models with their construction command sequences. This dataset has samples with more complex commands that the CADParser model is able to process.
 
 ## Chosen Result to Replicate
 
@@ -35,4 +36,6 @@ In other words, the autoregressive model tries to make two categorical predictio
 of the IEEE/CVF Conference on Computer Vision and Pattern Recognition.
 
 [3] Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). Attention is all you need. _Advances in Neural Information Processing Systems, 30_, 5998-6008.
+
+[4] Wu, R., Xiao, C., & Zheng, C. (2021). DeepCAD: A Deep Generative Network for Computer-Aided Design Models. arXiv preprint arXiv:2105.09492. Retrieved from https://arxiv.org/abs/2105.09492
 
