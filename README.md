@@ -43,9 +43,14 @@ The code should be able to run successfully by running every cell from the top.
 We use a Google Colab L4 GPU to run our notebook. A T4 GPU would also work.
 
 ## Our Results
+Here is a plot of our training loss:
+<img width="902" alt="training-loss" src="https://github.com/spicywagyu04/CADParser/assets/96509953/05da3d9d-164e-4b9d-9e23-11a1b26fa12e">
 
+Unfortunately, we have yet to generate actual CAD models from our command sequences, as doing so requires using a CAD-specific software.
 
 ## Conclusion
+There is much that we would like to implement in the future. In fact, we plan to get this project to work over summer. What we need to do is fix the training loss to ensure that our model is actually learning. Then, we could research about softwares to convert construction command sequences into CAD models. Last but not least, we should research ways to parse JSON data of more complex CAD commands so that we could integrate CADParser's own dataset in our project.
+
 
 ## References
 [1] Zhou, S., Tang, T., & Zhou, B. (2023). CADParser: A Learning Approach of Sequence Modeling for B-Rep CAD. Proceedings of the Thirty-Second International Joint Conference on Artificial Intelligence (IJCAI-23).
