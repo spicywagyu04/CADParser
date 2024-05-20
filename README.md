@@ -41,17 +41,21 @@ We recommend to run our code in CADParser.ipynb on Google Colab. The only depend
 The code should be able to run successfully by running every cell from the top.
 
 ### Computational Resources
-We use a Google Colab L4 GPU to run our notebook. A T4 GPU would also work.
+We use a Google Colab L4 GPU to run our notebook, which runs about 1 hour for 100 epochs. A T4 GPU would also work.
 
-## Our Results
+## Results and Analysis
 Here is a plot of our training loss:
 <img width="902" alt="training-loss" src="https://github.com/spicywagyu04/CADParser/assets/96509953/05da3d9d-164e-4b9d-9e23-11a1b26fa12e">
 
 Unfortunately, we have yet to generate actual CAD models from our command sequences, as doing so requires using a CAD-specific software.
 
-## Conclusion
-There is much that we would like to implement in the future. In fact, we plan to get this project to work over summer. What we need to do is fix the training loss to ensure that our model is actually learning. Then, we could research about softwares to convert construction command sequences into CAD models. Last but not least, we should research ways to parse JSON data of more complex CAD commands so that we could integrate CADParser's own dataset in our project.
+### Challenges
+The main challenge encountered during the re-implementation is that the author have left out some details in their paper. This makes our implementation with ambiguous and depending on the interpretation of the words. Also, the author does not provide the processing code that they have used. After realized that it requires the CAD domain knowledge to write the processing code to parse their dataset, especially the construction sequence part of the dataset, we need to find another equivalent dataset that has similar setting as the one in the paper but with less complexity in terms of the number of commands and the number of parameters. 
 
+## Conclusion and Future Work
+Through implementing this project, we have several key takeaways. First, we hand the hands-on experience with transformer and graph models. We gained a practical knowledge in implementing these models in a real world setting. We also realized that data processing is a critical and time-consuming step in the ML projects. Third, through this combination of the GCN with transformer decoder, we also learned that we cannot combine the strength of different models to leverage their complementary strengths. Lastly, ML in real world setting can be very huge. Therefore, careful planning is needed.
+
+There is much that we would like to implement in the future. In fact, we plan to get this project to work over summer. What we need to do is fix the training loss to ensure that our model is actually learning. Then, we could research about softwares to convert construction command sequences into CAD models. Last but not least, we should research ways to parse JSON data of more complex CAD commands so that we could integrate CADParser's own dataset in our project.
 
 ## References
 [1] Zhou, S., Tang, T., & Zhou, B. (2023). CADParser: A Learning Approach of Sequence Modeling for B-Rep CAD. Proceedings of the Thirty-Second International Joint Conference on Artificial Intelligence (IJCAI-23).
