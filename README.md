@@ -19,6 +19,7 @@ Compared to the DeepCAD paper [4], the CADParser paper expanded the set of proce
 
 ## Chosen Result to Replicate
 <img width="579" alt="CADParser results" src="https://github.com/spicywagyu04/CADParser/assets/96509953/200536ec-c454-4436-8b15-a06035e6e955">
+![Uploading Screenshot 2024-05-22 at 10.15.47 PM.png…]()
 
 In our reimplementation project, we wish to replicate the CADParser's IOU and Recall metric scores, which are 0.81 and 0.64 respectively. 
 
